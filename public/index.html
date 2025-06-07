@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX to Typst Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>LaTeX to Typst</h1>
+        <p>Transform your mathematical equations instantly</p>
+    </header>
+
+    <main>
+        <div class="upload-section" id="uploadSection">
+            <input type="file" id="formulaImage" accept="image/*" hidden/>
+            <div class="converter-options">
+                <label>
+                    <input type="radio" name="converter" value="tex2typst" checked>
+                    <span>tex2typst</span>
+                </label>
+                <label>
+                    <input type="radio" name="converter" value="pandoc">
+                    <span>Pandoc</span>
+                </label>
+            </div>
+            <div class="api-key-section">
+                <input type="password" id="simpletexToken" placeholder="Enter your SimpleTex API Token (Optional)">
+            </div>
+            <button id="uploadButton">Upload Formula Image</button>
+            <div id="imagePreviewContainer" class="preview-container" style="display: none;">
+                <img id="imagePreview" src="#" alt="Image Preview"/>
+            </div>
+        </div>
+
+        <div id="results" class="results-container" style="display: none;">
+            <div class="result-card">
+                <h2>Typst Output</h2>
+                <div class="output-container">
+                    <pre><code id="typstResult"></code></pre>
+                </div>
+                <button class="copy-button" data-clipboard-target="#typstResult">Copy to Clipboard</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+        <div id="error" class="error-message" style="display: none;"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

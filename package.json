@@ -1,0 +1,20 @@
+{
+    "name": "latex-to-typst-converter",
+    "version": "1.0.0",
+    "description": "A web app to convert LaTeX equations from images to Typst, with a choice of converters.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "vercel-build": "yum install -y pandoc"
+    },
+    "author": "Wells Bai",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.6.0",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "form-data": "^4.0.0",
+        "multer": "^1.4.5-lts.1",
+        "tex2typst": "^latest"
+    }
+}
