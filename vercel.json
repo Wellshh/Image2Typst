@@ -2,25 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "latex_to_typst/package.json",
+      "src": "package.json",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["latex_to_typst/**"]
+        "includeFiles": ["**"]
       }
     },
     {
-        "src": "latex_to_typst/public/**",
+        "src": "public/**",
         "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/upload",
-      "dest": "latex_to_typst/server.js"
+      "dest": "server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "latex_to_typst/public/$1"
+      "dest": "public/$1"
     }
   ]
 } 
