@@ -24,7 +24,7 @@ app.post('/upload', upload.single('formulaImage'), async (req, res) => {
 
   const { SIMPLETEX_API_TOKEN } = process.env;
   if (!SIMPLETEX_API_TOKEN) {
-    return res.status(500).json({ error: 'API token for SimpleTex is not configured on the server.' });
+    return res.status(500).json({ error: 'API token for SimpleTex is not configured on the server. Please use your own API!' });
   }
 
   try {
