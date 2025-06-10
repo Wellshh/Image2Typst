@@ -1,6 +1,8 @@
 # LaTeX to Typst Converter
 
 A web application that converts LaTeX formulas from images to Typst format. The application uses SimpleTex API for OCR and offers two conversion methods: Pandoc and tex2typst.
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/6c7e6f98-696c-421d-bf26-60aa6a05d6d1" />
+
 
 ## Project Structure
 
