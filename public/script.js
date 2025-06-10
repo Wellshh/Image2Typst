@@ -50,6 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Handle pasting image
+    uploadSection.addEventListener('paste', (e) => {
+        const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+        for (const item of items) {
+            if (item.type.indexOf('image') !== -1) {
+                const blob = item.getAsFile();
+                const file = new File([blob], 'pasted-image.png', { type: blob.type });
+                handleFile(file);
+                e.preventDefault();
+                return;
+            }
+        }
+    });
+
     function handleFile(file) {
         if (!file.type.startsWith('image/')) {
             errorMessage.textContent = 'Please select an image file.';

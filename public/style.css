@@ -50,11 +50,15 @@ main {
     padding: 2rem;
     border-radius: 20px;
     transition: all 0.3s ease;
+    border: 2px dashed transparent;
+    outline: none;
 }
 
+.upload-section:focus,
 .upload-section.drag-over {
     background: rgba(0, 122, 255, 0.1);
     transform: scale(1.02);
+    border-color: #007AFF;
 }
 
 /* Converter Options */
@@ -239,4 +243,11 @@ code {
     border-radius: 12px;
     margin-top: 2rem;
     backdrop-filter: blur(10px);
+}
+
+.upload-hint {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
 }

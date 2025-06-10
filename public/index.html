@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <div class="upload-section" id="uploadSection">
+        <div class="upload-section" id="uploadSection" tabindex="0">
             <input type="file" id="formulaImage" accept="image/*" hidden/>
             <div class="converter-options">
                 <label>
@@ -32,6 +32,7 @@
                 <input type="password" id="simpletexToken" placeholder="Enter your SimpleTex API Token (Optional)">
             </div>
             <button id="uploadButton">Upload Formula Image</button>
+            <p class="upload-hint">Or drag & drop / paste an image here</p>
             <div id="imagePreviewContainer" class="preview-container" style="display: none;">
                 <img id="imagePreview" src="#" alt="Image Preview"/>
             </div>

@@ -56,3 +56,6 @@ Thumbs.db
 *.svg
 *.tex
 *.typ 
+
+
+pandoc-service/result.log
